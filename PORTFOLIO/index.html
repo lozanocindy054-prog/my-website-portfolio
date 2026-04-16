@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cindy Lozano | About Me & Hobbies</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #fff9f2 0%, #fef5ea 100%);
+    font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Inter', Arial, sans-serif;
+    color: #2c2418;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+/* subtle background texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#e9dbcc 0.8px, transparent 0.8px);
+    background-size: 28px 28px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 120px 50px 120px;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeSlideUp 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TEXT SECTION */
+.hero-text {
+    flex: 1.2;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #3b2a1a;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px 0;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.hero-text h1:hover {
+    transform: translateX(6px);
+    color: #9b6e42;
+}
+
+.hero-text .tagline {
+    font-size: 1.2rem;
+    color: #9b7b5c;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-left: 3px solid #d6b17e;
+    padding-left: 16px;
+    margin-top: 8px;
+    transition: padding 0.2s ease;
+}
+
+.hero-text .tagline:hover {
+    padding-left: 24px;
+    border-left-color: #b47c44;
+}
+
+/* INTRO BOX */
+.intro {
+    max-width: 620px;
+    background: linear-gradient(135deg, #fffaf3, #fff6ed);
+    padding: 28px 30px;
+    border-radius: 32px;
+    font-size: 1rem;
+    color: #3a2e21;
+    margin-top: 32px;
+    line-height: 1.65;
+    border: 1px solid rgba(210, 180, 140, 0.4);
+    box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.intro:hover {
+    transform: translateY(-6px);
+    background: #fffef8;
+    box-shadow: 0 28px 32px -16px rgba(80, 55, 35, 0.2);
+    border-color: #dbb786;
+}
+
+/* IMAGE SECTION */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 20px 35px -12px rgba(60, 40, 20, 0.2);
+    transition: all 0.4s ease-in-out;
+    object-fit: cover;
+    display: block;
+    background: #f2e2d0;
+    border: 2px solid rgba(255, 245, 235, 0.8);
+}
+
+.hero-img img:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 28px 38px -12px rgba(70, 45, 20, 0.3);
+    border-color: #f0dbc4;
+}
+
+/* HOBBIES SECTION */
+.hobbies-section {
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 48px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #3b2a1a;
+    letter-spacing: -0.01em;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #9b7b5c;
+    margin-top: 8px;
+}
+
+.hobbies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: center;
+}
+
+.hobby-card {
+    background: #fffcf7;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 300px;
+    transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0e3d4;
+}
+
+.hobby-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 28px 32px -16px rgba(80, 55, 35, 0.2);
+    border-color: #e2cfb5;
+}
+
+.hobby-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.hobby-card:hover .hobby-img {
+    transform: scale(1.02);
+}
+
+.hobby-info {
+    padding: 22px 20px 26px;
+    text-align: center;
+}
+
+.hobby-info h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #b47c44;
+    margin-bottom: 12px;
+}
+
+.hobby-info p {
+    font-size: 0.95rem;
+    color: #5e4d38;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .hero {
+        padding: 50px 48px 40px 48px;
+        gap: 40px;
+    }
+    .hero-text h1 {
+        font-size: 3.8rem;
+    }
+    .intro {
+        padding: 22px 24px;
+    }
+    .section-title h2 {
+        font-size: 2.3rem;
+    }
+    .hobbies-section {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 780px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 48px 28px 40px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text .tagline {
+        border-left: none;
+        border-bottom: 2px solid #d6b17e;
+        padding-left: 0;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+    .hero-text .tagline:hover {
+        padding-left: 0;
+        border-bottom-color: #b47c44;
+    }
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-text h1:hover {
+        transform: translateX(0px) scale(1.02);
+    }
+    .intro {
+        text-align: left;
+        margin-top: 28px;
+    }
+    .hero-img img {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    .hobbies-grid {
+        gap: 32px;
+    }
+    .hobby-card {
+        width: 260px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        padding: 32px 20px 30px;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .intro {
+        padding: 20px 18px;
+        font-size: 0.95rem;
+    }
+    .section-title h2 {
+        font-size: 1.9rem;
+    }
+    .hobbies-section {
+        padding: 0 20px;
+    }
+    .hobby-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>About Me</h1>
+        <div class="tagline">Personal • Lifestyle • Everyday Life</div>
+
+        <div class="intro">
+            Hi everyone! Nice to meet you.  
+            My name is <strong>Cindy Lozano</strong>, I am 21 years old, and I currently live in Macatoc, Victoria.  
+            I am the second child among four siblings.  
+
+            <br><br>
+
+            I am currently studying at <strong>Mindoro State University (MINSU Main Campus)</strong>.  
+            I enjoy using my phone and watching videos during my free time.  
+            My life is simple, but full of lessons and experiences that I want to share with others.  
+
+            <br><br>
+
+            I also want to explore writing and design because this is where I can express my creativity and show who I really am as a person.
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="pic.png" alt="Cindy Lozano portrait">
+    </div>
+</section>
+
+<div class="hobbies-section">
+    <div class="section-title">
+        <h2> My Little Joys</h2>
+        <p>the things that make my everyday lighter</p>
+    </div>
+
+    <div class="hobbies-grid">
+        <!-- hobby 1: watching videos -->
+        <div class="hobby-card">
+            <img class="hobby-img" src="https://static.vecteezy.com/system/resources/previews/049/667/769/non_2x/social-media-icons-on-colorful-cubes-with-a-transparent-background-a-digital-representation-of-online-communication-and-interaction-png.png" alt="Watching videos on phone">
+            <div class="hobby-info">
+                <h3> Watching Videos</h3>
+                <p>Vlogs, funny clips, movie recaps — my easy way to unwind after a long day.</p>
+            </div>
+        </div>
+
+        <!-- hobby 2: reading inspirational stories -->
+        <div class="hobby-card">
+            <img class="hobby-img" src="https://tse4.mm.bing.net/th/id/OIP.xVLGSTlScN3ebfZTwBo2twHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Reading inspirational books">
+            <div class="hobby-info">
+                <h3>Inspirational Stories</h3>
+                <p>Real-life journeys and motivational reads that give me hope and new perspective.</p>
+            </div>
+        </div>
+
+        <!-- hobby 3: listening to OPM -->
+        <div class="hobby-card">
+            <img class="hobby-img" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&h=350&fit=crop" alt="Listening to OPM music">
+            <div class="hobby-info">
+                <h3>Listening to OPM</h3>
+                <p>Ben&Ben, Zack Tabudlo, and old classics — Original Pilipino Music hits different.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
